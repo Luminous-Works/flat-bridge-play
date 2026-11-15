@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="28" viewBox="0 0 96 28">
+  <!-- The slider track: a green stem with a vine spiralling round it, leaves and tendrils. Tiles horizontally. -->
+  <defs>
+    <linearGradient id="stem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fbf55"/><stop offset="0.45" stop-color="#3f7f2c"/><stop offset="1" stop-color="#1d4416"/>
+    </linearGradient>
+    <linearGradient id="vine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4c8a33"/><stop offset="1" stop-color="#173a12"/>
+    </linearGradient>
+    <linearGradient id="leafA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fd060"/><stop offset="1" stop-color="#2f6e24"/>
+    </linearGradient>
+    <linearGradient id="leafB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6fb04a"/><stop offset="1" stop-color="#1f5018"/>
+    </linearGradient>
+  </defs>
+  <!-- the stem, with a node ring -->
+  <rect x="0" y="11" width="96" height="6" rx="3" fill="url(#stem)"/>
+  <rect x="0" y="11.6" width="96" height="1.2" fill="#b6e58a" opacity="0.45"/>
+  <rect x="47" y="10.4" width="2.2" height="7.2" rx="1" fill="#2a5a1f"/>
+  <!-- the vine, behind the stem (dark) then over it (lit): a spiral -->
+  <path d="M0 18 C8 22 16 22 24 14" fill="none" stroke="#123010" stroke-width="2.4"/>
+  <path d="M48 18 C56 22 64 22 72 14" fill="none" stroke="#123010" stroke-width="2.4"/>
+  <path d="M24 14 C32 6 40 6 48 18" fill="none" stroke="url(#vine)" stroke-width="2.6"/>
+  <path d="M72 14 C80 6 88 6 96 18" fill="none" stroke="url(#vine)" stroke-width="2.6"/>
+  <path d="M26 12 C33 6.5 39 6.5 45 14" fill="none" stroke="#9ad06a" stroke-width="0.7" opacity="0.7"/>
+  <path d="M74 12 C81 6.5 87 6.5 93 14" fill="none" stroke="#9ad06a" stroke-width="0.7" opacity="0.7"/>
+  <!-- leaves, with a midrib -->
+  <g>
+    <path d="M33 8 C30 1 37 -1 41 2 C39 6 36 8 33 8 Z" fill="url(#leafA)"/>
+    <path d="M33 8 C35.5 5 38 3 40.5 2.2" fill="none" stroke="#1f4a17" stroke-width="0.6"/>
+  </g>
+  <g>
+    <path d="M60 21 C63 27 56 29 52 26 C54 22.5 57 21 60 21 Z" fill="url(#leafB)"/>
+    <path d="M60 21 C57.5 23 55 25 52.6 25.8" fill="none" stroke="#163a12" stroke-width="0.6"/>
+  </g>
+  <g>
+    <path d="M84 7.5 C86 2 91 2.5 92 5 C89.5 7.5 87 8 84 7.5 Z" fill="url(#leafA)"/>
+    <path d="M84 7.5 C87 6 89.5 5 91.6 5" fill="none" stroke="#1f4a17" stroke-width="0.5"/>
+  </g>
+  <g>
+    <path d="M10 21 C7 26.5 13 28 16 25 C14 22.5 12 21 10 21 Z" fill="url(#leafB)"/>
+    <path d="M10 21 C12 23 14 24 15.6 25" fill="none" stroke="#163a12" stroke-width="0.5"/>
+  </g>
+  <!-- tendrils -->
+  <path d="M20 13 c-2 -3 1 -6 3 -4 c1.5 1.5 -0.5 3 -1.5 2" fill="none" stroke="#5c9a3c" stroke-width="0.7"/>
+  <path d="M68 15 c2 3 -1 6 -3 4 c-1.5 -1.5 0.5 -3 1.5 -2" fill="none" stroke="#5c9a3c" stroke-width="0.7"/>
+</svg>

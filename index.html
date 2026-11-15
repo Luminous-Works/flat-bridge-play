@@ -13,22 +13,53 @@
         z-index: 50;
         max-width: 360px;
         padding: 10px 14px;
-        border: 2px solid #ffd166;
+        border: 1.5px solid rgba(255, 209, 102, 0.55);
         border-radius: 14px;
-        background: rgba(10, 14, 26, 0.86);
+        /* Smoked glass: the scene shows through it. */
+        background: rgba(8, 14, 20, 0.42);
+        backdrop-filter: blur(3px);
         color: #e8e9f6;
         font: 14px/1.45 system-ui, sans-serif;
+        white-space: pre-line;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+        /* It drifts gently in and out of focus, like something seen through water. */
+        animation: hint-shimmer 7s ease-in-out infinite;
+        transition: opacity 1.4s ease;
       }
+      /* Idle: after a few seconds the panel sinks to a ghost so it stays out of the scene (src/world/hud-fade.ts). */
+      #hint.idle { opacity: 0.16; }
+      #hint:hover { opacity: 1; }
       #hint b { color: #ffd166; }
+      /* The Music and Ambience sliders: a vine for the track, a glowing peenie-wally for the handle (Tony). */
+      #mix label { font: italic 600 14px Georgia, serif; color: #ffd166; display: inline-flex; align-items: center; gap: 8px; }
+      #mix label span { display: inline-block; width: 74px; }
+      #mix input[type='range'] { -webkit-appearance: none; appearance: none; width: 200px; height: 30px; background: transparent; cursor: pointer; }
+      #mix input[type='range']::-webkit-slider-runnable-track { height: 28px; background: url('ui/skin/vine-track.svg') repeat-x center / 96px 28px; }
+      #mix input[type='range']::-moz-range-track { height: 28px; background: url('ui/skin/vine-track.svg') repeat-x center / 96px 28px; }
+      #mix input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; width: 34px; height: 34px; margin-top: -3px; border: 0; background: url('ui/skin/peenie-wally.svg') center / contain no-repeat; filter: drop-shadow(0 0 6px rgba(150, 255, 120, 0.9)); }
+      #mix input[type='range']::-moz-range-thumb { width: 34px; height: 34px; border: 0; background: url('ui/skin/peenie-wally.svg') center / contain no-repeat; filter: drop-shadow(0 0 6px rgba(150, 255, 120, 0.9)); }
+      #mix input[type='range']:focus { outline: none; }
+      @keyframes hint-shimmer {
+        0%, 100% { filter: blur(0px); border-color: rgba(255, 209, 102, 0.55); }
+        50% { filter: blur(0.7px); border-color: rgba(120, 255, 200, 0.4); }
+      }
     </style>
-    <script type="module" crossorigin src="/flat-bridge-play/assets/index-BvC3VLvx.js"></script>
+    <script type="module" crossorigin src="./assets/index-3hBDryFQ.js"></script>
   </head>
   <body style="margin: 0">
     <div id="scene-container"></div>
     <div id="hint">
-      <b>Flat Bridge</b> &mdash; you are Samuel. Heed his warning, or the river takes it all back.<br />
-      <b>Quest:</b> press Enter XR, with hand tracking on. Pinch the gold in the river. Pinch the reins to drive away.<br />
-      <b>Computer:</b> press Enter XR, then click the gold. Click the reins to leave. Headphones help.
-    </div>
+      <b>Flat Bridge</b> &mdash; you are Samuel.<br />
+      <b>Move:</b> W A S D or arrows &nbsp; <b>Run:</b> Shift &nbsp; <b>Jump:</b> Space &nbsp; <b>Dodge:</b> Q<br />
+      <b>Talk / act:</b> E &nbsp; <b>Reply:</b> 1 2 3 &nbsp; <b>Look:</b> drag the mouse<br />
+      <b>Knapsack:</b> I &nbsp; <b>Rum:</b> R &nbsp; <b>Ale:</b> T &nbsp; <b>This panel:</b> H<br />
+      <b>Quest:</b> Enter XR. Left stick moves, A jumps, right trigger acts.
+      <div id="mix" style="margin-top: 6px; display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+        <label><span>Music</span> <input id="vol-music" type="range" min="0" max="100" value="80" /></label>
+        <label><span>Ambience</span> <input id="vol-amb" type="range" min="0" max="100" value="100" /></label>
+        <label style="cursor: pointer"><span>Auto-advance</span> <input id="auto-adv" type="checkbox" checked style="accent-color: #b8ff7a" /></label>
+      </div>
+      <div id="hud" style="margin-top: 6px; color: #ffd166; font-weight: 700; white-space: pre-line">Gold specks: 0</div>
+    </div>
   </body>
 </html>

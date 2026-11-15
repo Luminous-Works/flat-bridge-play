@@ -1,0 +1,31 @@
+{
+  "title": "The Cart Crossing",
+  "description": "A 6/8 jig in D at 130 dotted-crotchet bpm: the cart bolts across Flat Bridge.",
+  "bpm": 130.0,
+  "metre": "6/8",
+  "key": "D major (B strain in the relative minor)",
+  "duration": 48.0,
+  "loop": {
+    "primary": 48.0,
+    "alternate": 29.538,
+    "note": "Both cuts land back on bar 1 cleanly; the last bar of the piece is a dominant pedal."
+  },
+  "sections": {
+    "a-strain": 0.0,
+    "b-strain": 14.769,
+    "a-again": 29.538,
+    "bridge-figure": 36.923,
+    "the-return": 40.615
+  },
+  "stems": [
+    "lead",
+    "dance",
+    "strings",
+    "stinger"
+  ],
+  "stinger": {
+    "duration": 4.0,
+    "use": "One-shot accent for the wheels hitting the planks; fire it on the event, on top of the stems."
+  },
+  "credits": "The tune is original (composed for Flat Bridge). Rendered by tools/make_crossing.py from Philharmonia Sound Exchange recordings (violin, viola, cello) and the Versilian Community Sample Library, CC0 (frame drum as the bodhran, baroque soprano recorder as the fife). Raw samples are not shipped; only the finished mixed music. No third-party music was sampled."
+}

@@ -1,8 +1,31 @@
 {
-  "version": "iwsdk.scene.v1",
-  "units": "meters",
-  "components": {},
-  "resources": {},
+  "authoring": {
+    "views": []
+  },
+  "components": {
+    "com.iwsdk.components.SpotLight": {
+      "angleDeg": 60,
+      "castShadow": false,
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "decay": 2,
+      "distance": 0,
+      "intensity": 1,
+      "penumbra": 0,
+      "shadowBias": 0,
+      "shadowCameraFar": 100,
+      "shadowCameraNear": 0.1,
+      "shadowMapSize": "1024",
+      "shadowNormalBias": 0,
+      "shadowRadius": 1
+    }
+  },
   "nodes": [],
-  "authoring": { "views": [] }
+  "resources": {},
+  "units": "meters",
+  "version": "iwsdk.scene.v1"
 }
