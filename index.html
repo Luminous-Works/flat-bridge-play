@@ -44,20 +44,19 @@
         50% { filter: blur(0.7px); border-color: rgba(120, 255, 200, 0.4); }
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-BSRIJpOK.js"></script>
+    <script type="module" crossorigin src="./assets/index-7lb6546E.js"></script>
   </head>
   <body style="margin: 0">
     <div id="scene-container"></div>
     <div id="hint">
-      <b>Flat Bridge</b> &mdash; you are Samuel.<br />
-      <b>Move:</b> W A S D or arrows &nbsp; <b>Run:</b> Shift &nbsp; <b>Jump:</b> Space &nbsp; <b>Dodge:</b> Q<br />
-      <b>Talk / act:</b> E &nbsp; <b>Reply:</b> 1 2 3 &nbsp; <b>Look:</b> drag the mouse<br />
-      <b>Knapsack:</b> I &nbsp; <b>Rum:</b> R &nbsp; <b>Ale:</b> T &nbsp; <b>This panel:</b> H<br />
-      <b>Quest:</b> Enter XR. Left stick moves, A jumps, right trigger acts.
-      <div id="mix" style="margin-top: 6px; display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
-        <label><span>Music</span> <input id="vol-music" type="range" min="0" max="100" value="80" /></label>
-        <label><span>Ambience</span> <input id="vol-amb" type="range" min="0" max="100" value="100" /></label>
-        <label style="cursor: pointer"><span>Auto-advance</span> <input id="auto-adv" type="checkbox" checked style="accent-color: #b8ff7a" /></label>
+      <b>Waters of Flat Bridge</b> &nbsp;<span style="opacity: 0.75">H &middot; Menu</span>
+      <!-- The settings, set from the in-game menu (src/world/game-menu.ts): hidden inputs that keep the wiring and the
+           remembered values. -->
+      <div id="mix" style="display: none">
+        <input id="vol-music" type="range" min="0" max="100" value="80" />
+        <input id="vol-amb" type="range" min="0" max="100" value="100" />
+        <input id="auto-adv" type="checkbox" checked />
+        <input id="show-lyrics" type="checkbox" />
       </div>
       <div id="hud" style="margin-top: 6px; color: #ffd166; font-weight: 700; white-space: pre-line">Gold specks: 0</div>
     </div>
