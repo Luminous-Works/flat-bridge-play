@@ -1,6 +1,6 @@
 # Waters of Flat Bridge
 
-A Jamaican folklore adventure set in the 1780s, at Flat Bridge on the Rio Cobre. You are Samuel, a young stagecoach driver who stumbles on River Mumma's gold. From the gorge to Bog Walk, Spanish Town, the King's Highway and Kingston harbour, you are pursued by Redcoats, the Rolling Calf and River Mumma herself.
+A Jamaican folklore adventure set in the 1780s, at Flat Bridge on the Rio Cobre. You are Samuel, a stagecoach driver born on the Montague estate, who stumbles on River Mumma's gold. From the gorge to Bog Walk, Spanish Town, the King's Highway and Kingston harbour, you are pursued by Redcoats, the Rolling Calf and River Mumma herself.
 
 **Play:** https://luminous-works.github.io/flat-bridge-play/
 
